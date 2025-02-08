@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Contact Me</title>
+</head>
+<body>
+    <!-- navigation bar -->
+    <div class="header">
+        <img src="leroy-high-resolution-logo-white-transparent.png" alt="logo">
+        <div class="navbar">
+            <ul>
+                <li><a href="Home page.html">Home</a></li>
+                <li><a href="about page.html">About me</a></li>
+                <li><a href="Portfolio page.html">Portfolio</a></li>
+                <li><a href="contact page.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+        <div class="main">
+            <div class="contact-main">
+                <h1>Contact Me</h1>
+            </div>
+            <div id="particles-js"></div>
+            <div class="text">
+                <h3>Let's Work Together</h3>
+                <p>Feel free to get in touch with me. I am always open to new project and opportunities.</p>
+            </div>
+            <div class="contact-info">
+                <div class="card one">
+                    <div class="img-container">
+                        <img src="viber.png" alt="call">
+                    </div>
+                    <h4>Call me</h4>
+                    <p>+248 2 601 477</p>    
+                </div>
+                <div class="card two">
+                    <div class="img-container">
+                        <img src="mail.png" alt="mail">
+                    </div>
+                    <h4>Mail me</h4>
+                    <p>leroy@gmail.com</p>    
+                </div>
+                <div class="card three">
+                    <div class="img-container">
+                        <img src="location.png" alt="location">
+                    </div>
+                    <h4>Address</h4>
+                    <p>123 St, Victoria, Seychelles</p>    
+                </div>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <h1>Drop me a line</h1>
+                    <div class="inputbox">
+                        <input type="text" name="name" required="required" placeholder="Name *">
+                    </div>
+                    <div class="inputbox">
+                        <input type="email" name="email" required="required" placeholder="E-mail *">
+                    </div>
+                    <div class="inputbox">
+                        <textarea name="message" required="required" placeholder="Message *"></textarea>
+                    </div>
+                    <div class="inputbox">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+            <footer>
+                <div class="social">
+                    <a href="https://github.com/"><img src="github.png" alt="Github"></a>
+                    <a href="https://www.linkedin.com/in/leroy-pillay-a41a72274/"><img src="linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://instagram.com/yorel.06/"><img src="instagram.png" alt="Instagram"></a>
+                    <a href="https://twitter.com/JumpFail"><img src="twitter.png" alt="Twitter"></a>
+                </div>
+                <p>&copy; <span id="copyrightYear"></span> Leroy. All rights reserved.</p>
+            </footer>
+            <script>
+                document.getElementById("copyrightYear").innerHTML = new Date().getFullYear();
+            </script>            
+        </div>
+    </div>
+    <script src="particles-3.js"></script>
+    <script src="app-3.js"></script>
+</body>
+</html>

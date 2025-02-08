@@ -1,0 +1,336 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    /* border: 1px dotted magenta; */
+}
+
+body {
+    background: #1F2129;
+}
+
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3px 100px;
+    background: #111319;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header img {
+    height: auto;
+    width: 110px;
+    margin-right: auto;
+    margin-left: 50px;
+    align-items: left;
+}
+
+.navbar a {
+    font-size: 25px;
+    color: #CEC19D;
+    text-decoration: none;
+    margin-left: 40px;
+    font-weight: 600;
+}
+
+.navbar a::before {
+    content: '';
+    top: 100%;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #CEC19D;
+    transition: .3s;
+    margin-left: 40px;
+}
+
+.navbar a:hover::before {
+    width: 75%;
+}
+
+.navbar ul, li {
+    list-style: none;
+    float: inline-start;
+    position: relative;
+    margin-right: 20px;
+}
+
+.main {
+    background-color: #1F2129;
+    align-items: center;
+    text-align: center;
+}
+
+.main h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+}
+
+.text {
+    color: #fff;
+    margin-bottom: 20px;
+    animation: slide_down 1.5s ease;
+}
+
+.text h3 {
+    font-size: 25px;
+}
+
+.text p {
+    font-size: 15px;
+}
+
+.contact-info {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin-left: 150px;
+}
+
+.contact-info, .contact-form {
+    position: relative;
+    z-index: 1; /* Make sure the contact info and contact form are above the particles background */
+}
+
+.card {
+    background: #2B2928;
+    padding: 0 20px;
+    margin: 0 10px;
+    width: calc(33% - 20px);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+}
+
+.img-container {
+    display: inline-block;
+    background-color: #CEC19D;
+    line-height: 60px !important; /* Adjust as needed */
+    text-align: center;
+    border-radius: 50%; /* Adjust as needed */
+    transition: 0.3s linear; /* Add transitions as needed */
+    width: 80px;
+    height: 80px;
+}
+
+.img-container img {
+    height: 60px;
+    width: auto;
+    filter: invert(100%);
+    margin-top: 10px;
+}
+
+.img-container:hover {
+    background: none;
+    filter: invert(0);
+    transform: scale(1.2);
+}
+
+.card p {
+    margin-top: 10px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    max-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+
+.card:hover p {
+    max-height: 40px;
+    opacity: 1;
+}
+
+.contact-form {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -100px;
+}
+
+.contact-form form {
+    background: #2B2928;
+    width: 670px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    border-radius: 10px;
+    animation: slide_up 1.5s ease;
+}
+
+.contact-form h1 {
+    color: #FFF;
+    font-weight: 500;
+    text-align: center;
+}
+
+.contact-form .inputbox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contact-form .inputbox input,
+.contact-form .inputbox textarea {
+    width: 290px;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    resize: none;
+    background-color: #2B2928;
+    color: #CEC19D;
+}
+
+.contact-form .inputbox input::placeholder,
+.contact-form .inputbox textarea::placeholder {
+    color: #CEC19D;
+}
+
+.contact-form .inputbox input:focus,
+.contact-form .inputbox textarea:focus {
+    border-bottom: 2px solid #B5A57A;
+}
+
+.contact-form .inputbox input[type="submit"] {
+    width: 100px;
+    background: #CEC19D;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 130vh;
+    z-index: 0;
+}
+
+.one {
+    animation: slide_right 1.5s ease;
+}
+
+.two {
+    animation: fade_in 1.5s ease;
+}
+
+.three {
+    animation: slide_left 1.5s ease;
+}
+
+.contact-main {
+    animation: slide_down 1.5s ease;
+    animation-duration: 1.8s;
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide_right {
+    0% {
+        transform: translateX(-350px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_left {
+    0% {
+        transform: translateX(350px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_down {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_up {
+    0% {
+        transform: translateY(300px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+span {
+    color: #CEC19D;
+}
+
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #111319;
+    color: #ffffff;
+    padding: 20px 0;
+    z-index: 1;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Add margin for separation from the copyright notice */
+}
+
+.social img {
+    width: 30px; /* Adjust the width of the icons as needed */
+    margin: 0 10px; /* Add spacing between the icons */
+    filter: invert(100%);
+}
+
+footer p {
+    margin-top: 10px; /* Add margin above the copyright notice */
+}

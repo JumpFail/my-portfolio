@@ -1,0 +1,278 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3px 100px;
+    background-color: #111319;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.heading {
+    background-color: #1F2129;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    width: 90%;
+    margin: 20px auto;
+}
+
+.heading h1 {
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.header img {
+    height: auto;
+    width: 110px;
+    margin-right: auto;
+    margin-left: 50px;
+    align-items: left;
+}
+
+.navbar a {
+    font-size: 25px;
+    color: #CEC19D;
+    text-decoration: none;
+    margin-left: 40px;
+    font-weight: 600;
+}
+
+.navbar a::before {
+    content: '';
+    top: 100%;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #CEC19D;
+    transition: .3s;
+    margin-left: 40px;
+}
+
+.navbar a:hover::before {
+    width: 75%;
+}
+
+.navbar ul, li {
+    list-style: none;
+    float: inline-start;
+    position: relative;
+    margin-right: 20px;
+}
+
+body {
+    background-color: #1F2129;
+}
+
+span {
+    color: #CEC19D;
+}
+
+.portfolio {
+    position: absolute;
+    z-index: 1;
+    margin-left: 160px;
+    align-items: center;
+    text-align: center;
+}
+
+.portfolio h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+    animation: slide_down 1.5s ease;
+    animation-duration: 1.8s;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.portfolio-box {
+    position: relative;
+    width: 350px;
+    height: 200px;
+    margin: 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.text-overlay {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+
+.portfolio-img:hover .overlay {
+    opacity: 1;
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+    cursor: pointer;
+}
+
+.portfolio-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.portfolio-text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #272727;
+    text-decoration: none;
+    background-color: #2B2928;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.portfolio-text h4 {
+    color: #CEC19D;
+    font-size: 20px;
+}
+
+.portfolio-text p {
+    color: #9b9b9b;
+    font-size: 15px;
+    margin: 20px 0px;
+}
+
+.portfolio-text a {
+    color: white;
+    text-decoration: none;
+}
+
+.portfolio-text a:hover {
+    color: grey;
+    transition: all ease 0.3s;
+}
+
+#particles-js {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 0;
+}
+
+/* footer */
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #111319;
+    color: #ffffff;
+    padding: 20px 0;
+    z-index: 1;
+    bottom: -650px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Add margin for separation from the copyright notice */
+}
+
+.social img {
+    width: 30px; /* Adjust the width of the icons as needed */
+    margin: 0 10px; /* Add spacing between the icons */
+    filter: invert(100%);
+}
+
+footer p {
+    margin-top: 10px; /* Add margin above the copyright notice */
+}
+
+.one {
+    animation: slide_right 1.5s ease;
+}
+
+.two {
+    animation: fade_in 1.5s ease;
+}
+
+.three {
+    animation: slide_left 1.5s ease;
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide_right {
+    0% {
+        transform: translateX(-350px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_left {
+    0% {
+        transform: translateX(350px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_down {
+    0% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}

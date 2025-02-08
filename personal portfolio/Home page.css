@@ -1,0 +1,192 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3px 100px;
+    background-color: #111319;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.heading {
+    background-color: #1F2129;
+    display: flex;
+    justify-content: center;
+    text-align: center; /* Center align the text */
+    height: 100%; /* Vertically center the content */
+    font-size: 30px;
+    color: white;
+}
+
+.header img {
+    height: auto;
+    width: 110px;
+    margin-right: auto;
+    margin-left: 50px;
+    align-items: left;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #CEC19D;
+    text-decoration: none;
+    margin-left: 40px;
+    font-weight: 600;
+}
+
+.navbar a::before {
+    content: '';
+    top: 100%;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #CEC19D;
+    transition: .3s;
+    margin-left: 40px;
+}
+
+.navbar a:hover::before {
+    width: 75%;
+}
+
+.navbar ul, li {
+    list-style: none;
+    float: inline-start;
+    position: relative;
+    margin-right: 20px;
+}
+
+body {
+    background-color: #111319;
+}
+
+.main {
+    position: absolute; /* Position main content container absolutely within particles container */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+    text-align: center;
+    max-width: 80%; /* Set maximum width for the main content */
+    padding: 0 20px; /* Add padding to maintain some space between text and edges */
+    z-index: 1; /* Set a higher z-index to ensure the main content is on top of the particles */
+}
+
+.main h1 {
+    text-align: center;
+    font-size: 60px;
+    color: #fff;
+}
+
+.main a {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.main a:hover {
+    background: #CEC19D;
+    color: #111319;
+    transition: .3s;
+}
+
+.main h3 {
+    color: #fff;
+    line-height: 25px;
+}
+
+span {
+    color: #CEC19D;
+}
+
+.wrapper {
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.wrapper span{
+    position: relative;
+}
+
+.wrapper span::before {
+    content: "Freelancer";
+    color: #CEC19D;
+    animation: words 20s infinite;
+}
+
+.wrapper span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #111319;
+    border-left: 2px solid #CEC19D;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+.inner {
+    animation: Slide_Up 1.4s ease;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+@keyframes Slide_Up {
+    0% {
+        transform: translateY(250px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid #CEC19D;
+    }
+}
+
+@keyframes words {
+    0%, 25% {
+        content: "Freelancer";
+    }
+    26%, 50% {
+        content: "Web Developer";
+    }
+    51%, 75% {
+        content: "Programmer";
+    }
+    76%, 100% {
+        content: "UI/UX Designer";
+    }
+}
+
+@keyframes typing {
+    12.5%,18.75%,37.5%,43.75%,62.5%,68.75%,87.5%,93.75% {
+        width: 0;
+    }
+    6.25%,25%,31.25%,50%,56.25%,75%,81.25%,100% {
+        width: calc(100% + 8px);
+    }
+}
